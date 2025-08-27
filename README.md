@@ -14,8 +14,6 @@ A small collection of UNIX utilities and a mini shell implementation for experim
 - [Usage examples](#usage-examples)
 - [Testing and test utilities](#testing-and-test-utilities)
 - [Implementation notes & design decisions](#implementation-notes--design-decisions)
-- [How to contribute](#how-to-contribute)
-- [License](#license)
 
 ---
 
@@ -161,19 +159,6 @@ kill $CREATOR_PID
 - `flock` is used in `createlock.cpp` to demonstrate advisory file locks. Since `flock` is advisory, programs must cooperate for it to be meaningful.
 - The shell implementation uses `readline` for a better interactive experience and persists a `.history` file (see `history.cpp` / `history.hpp`).
 - Error handling in test utilities is intentionally minimal for clarity.
-
----
-
-## How to contribute
-- Add a `Makefile` that builds all binaries and a `clean` target.
-- Add command-line parsing for `delep` and `squashbug` so they can be executed cleanly with documented flags.
-- Improve `README` by including exact command-line options after exporting argument parsing from main.
-- Add unit tests or small integration scripts under `tests/`.
-
----
-
-## License
-This repository does not include an explicit license file. For demonstration/learning projects like this one, the MIT license is commonly used. If you wish to license it, add a `LICENSE` file (for example, MIT) and update this README accordingly.
 
 ---
 
